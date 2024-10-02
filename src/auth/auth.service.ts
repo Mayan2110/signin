@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as bcrypt from 'bcrypt';
@@ -7,7 +7,6 @@ import * as bcrypt from 'bcrypt';
 export class AuthService {
   constructor(private jwtservice: JwtService,
     private prisma: PrismaService) { }
-
   async login(username: string, password: string): Promise<{ message: string, access_token: String }> {
     const user = await this.prisma.user.findFirst({
       where: { username }
@@ -28,7 +27,6 @@ export class AuthService {
   }
 
   async validateUser(username: string, Password: string): Promise<any> {
-
     const user = await this.prisma.user.findFirst({
       where: {
         username
@@ -36,7 +34,6 @@ export class AuthService {
     });
   }
 }
-
 
 
 

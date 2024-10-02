@@ -22,3 +22,16 @@ model User {
   dob       DateTime?
   IsDeleted Boolean   @default(false)
 }
+
+jo je auth hai ee rite book nu ek bane 
+but ee auth eee defult ee auth karvanu hai etle have book nu folder banayu ne ema 
+jo ek folder auth nu hai 
+ek user nu hai 
+ee rite book nu banavnu hai 
+simple
+kya gayi pela aa code git hub ma pus kar 
+ arrite java davu 
+ karo dekhuar are karu pan aa comment lakhi chale 
+ chenging this code evu 
+ kayi message lakhvo pade toj push thay 
+ lakhosuet ke 
